@@ -8,16 +8,24 @@
 
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="org.example.countrycapitalquiz.LänderController"
-            prefHeight="400.0" prefWidth="600.0">
+            fx:controller="org.example.countrycapitalquiz.QuizController"
+            prefHeight="800.0" prefWidth="600.0"
+            stylesheets="@style.css">
 
+    <VBox>
+        <HBox id="header">
+            <Button text="Start!" onAction="#updateCountry"/>
+            <Label fx:id="countryLabel" text="Whats the Capital of :"/>
+        </HBox>
+        <Label text="Type your answere in:"/>
+        <HBox id="textField">
+            <TextField fx:id="solutionTextField"/>
+            <Button text="Send" onAction="#updateSolution"/>
+        </HBox>
+        <Label fx:id="solutionLabel"/>
+        <Label id="footerLabel" text="Anmerkung: Sonderzeichen sind nicht erlaubt! Also aus &quot;Türkei&quot; wird &quot;Turkei&quot;"/>
+    </VBox>
 
-    <Button text="Start!"/>
-    <Label text="type your answere in:"/>
-    <HBox spacing="10">
-        <TextField/>
-        <Button text="Send"/>
-    </HBox>
 
 
 </AnchorPane>
